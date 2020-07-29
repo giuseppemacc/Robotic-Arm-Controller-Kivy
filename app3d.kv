@@ -1,0 +1,146 @@
+
+<BackgroundBox@BoxLayout>:
+    color : [0,0,0]
+    canvas.before:
+        Color:
+            rgb: self.color
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+<RootWindow>:
+    canvas.before:
+        Color:
+            rgb: [.9,.9,1]
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'horizontal'
+    font_color : [0,0,0,1]
+    BackgroundBox:
+        color: [.9,.9,1]
+        size_hint: [.4,1]
+        orientation: 'vertical'
+
+        BoxLayout:
+            size_hint: [1,.05]
+            Label:
+                color: root.font_color
+                size_hint: [.3,1]
+                text: 'Porta'
+            TextInputPort:
+                size_hint: [.4,1]
+                font_size: self.height/2
+            LabelPort:
+                color: root.font_color
+                size_hint: [.3,1]
+        BoxLayout:
+            size_hint: [1,.05]
+            Label:
+                color: root.font_color
+                size_hint: [.7,1]
+                text: 'master'
+            CheckBoxMaster:
+                size_hint: [.3,1]
+
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: [1,.5]
+            BoxLayout: # BASE
+                Label:
+                    color: root.font_color
+                    size_hint: [.4,1]
+                    text: "Base"
+                Label:
+                    color: root.font_color
+                    size_hint: [.1,1]
+                    font_size: 14
+                    text: str(int(Base.value))
+                Slide_angles:
+                    id: Base
+                    size_hint: [.75,1]
+                    min: 0
+                    max: 360
+                    value: 180
+            BoxLayout: # NODO1
+                Label:
+                    color: root.font_color
+                    size_hint: [.4,1]
+                    font_size: 14
+                    text: "Nodo1"
+                Label:
+                    color: root.font_color
+                    size_hint: [.1,1]
+                    text: str(int(Nodo1.value))
+                Slide_angles:
+                    id: Nodo1
+                    size_hint: [.75,1]
+            BoxLayout: # NODO2
+                Label:
+                    color: root.font_color
+                    size_hint: [.4,1]
+                    font_size: 14
+                    text: "Nodo2"
+                Label:
+                    color: root.font_color
+                    size_hint: [.1,1]
+                    text: str(int(Nodo2.value))
+                Slide_angles:
+                    id: Nodo2
+                    size_hint: [.75,1]
+            BoxLayout: # NODO3
+                Label:
+                    color: root.font_color
+                    size_hint: [.4,1]
+                    font_size: 14
+                    text: "Nodo3"
+                Label:
+                    color: root.font_color
+                    size_hint: [.1,1]
+                    text: str(int(Nodo3.value))
+                Slide_angles:
+                    id: Nodo3
+                    size_hint: [.75,1]
+            BoxLayout: # PINZA_BASE
+                Label:
+                    color: root.font_color
+                    size_hint: [.4,1]
+                    font_size: 14
+                    text: "Pinza_Base"
+                Label:
+                    color: root.font_color
+                    size_hint: [.1,1]
+                    text: str(int(Pinza_Base.value))
+                Slide_angles:
+                    id: Pinza_Base
+                    size_hint: [.75,1]
+                    min: 0
+                    max: 360
+                    value: 180
+            BoxLayout: # PINZA
+                Label:
+                    color: root.font_color
+                    size_hint: [.4,1]
+                    font_size: 14
+                    text: "Pinza"
+                Label:
+                    color: root.font_color
+                    size_hint: [.1,1]
+                    text: str(int(Pinza.value))
+                Slide_angles:
+                    id: Pinza
+                    size_hint: [.75,1]
+                    min: 0
+                    max: 45
+                    value: 0
+
+        BoxLayout:
+            size_hint: [1,.1]
+            Slide_rotate:
+                min: 0
+                max: 360
+            Slide_speed:
+                min: 0
+                max: 2
+
+        Label
