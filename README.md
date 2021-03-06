@@ -2,6 +2,6 @@
 
 ![plot](./example_images/example1.PNG)
 
-This project allows you to control a robotic arm (made with Arduino) via serial connection.
+This project allows you to control a **Robotic Arm** (made with Arduino) via **Serial Connection**.
 
-It can also work in slave mode in which it performs the function of displaying the movement of the robotic arm in real time.
+It can also work in **Slave** mode in which it performs the function of **displaying** the movement of the Robotic Arm in **Real time**.
